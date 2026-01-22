@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink, Outlet } from 'react-router-dom';
-import { Users, Calendar, LayoutDashboard } from 'lucide-react';
+import { Users, Calendar } from 'lucide-react';
 import { cn } from '../lib/utils';
 
 export function Layout() {

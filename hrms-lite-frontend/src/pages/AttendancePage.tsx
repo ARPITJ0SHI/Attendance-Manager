@@ -27,7 +27,6 @@ export default function AttendancePage() {
     const [attendance, setAttendance] = useState<Attendance[]>([]);
     const [employees, setEmployees] = useState<Employee[]>([]);
     const [isLoading, setIsLoading] = useState(true);
-    const [error, setError] = useState<string | null>(null);
 
     const [currentMonth, setCurrentMonth] = useState(new Date());
 
@@ -56,7 +55,7 @@ export default function AttendancePage() {
             }));
             setAttendance(attData);
         } catch (err) {
-            setError(handleApiError(err));
+            console.error(handleApiError(err));
         } finally {
             setIsLoading(false);
         }
